@@ -8,7 +8,7 @@ namespace IDal
 {
     public interface IAdmin
     {
-        int  register(Model.BBSUsers model);
+        int register(Model.BBSUsers model);
 
         int login(Model.BBSUsers model);
 

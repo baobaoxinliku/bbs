@@ -13,7 +13,6 @@ namespace Bll
         private readonly IDal.IAdmin dal = DALbbs.DataAccess.CreateAdmin();
         public int register(BBSUsers model)
         {
-            int x;
             return dal.register(model);
         }
         public int login(BBSUsers model)
