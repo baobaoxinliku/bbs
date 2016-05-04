@@ -1,0 +1,24 @@
+﻿
+
+.code{padding-top:10px;
+margin-left:50px}
+.navbar{margin-bottom:0px;}
+@media(max-width:1000px){
+	.carousel{ height:175px;}
+	.carousel .item{ height:175px;}
+}
+.big{background-image:url(../images/big.jpg);
+width:1200px;
+height:800px}
+.small{padding-top:580px;
+padding-left:120px}
+.wenzi{padding-left:30px;
+padding-top:30px;
+color:#336633}
+
+.navbar-header{margin-top:15px;
+color:#999999;
+
+padding-left:30px;
+margin-top:20px;
+font-size:16px}
