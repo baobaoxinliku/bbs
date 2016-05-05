@@ -38,3 +38,14 @@
 .jumbotron {
     height:250px;
 }
+.style-border-left-blue{
+	padding: 2px 0px 2px 10px;
+	border-left: 3px solid #1874CD;
+	font-size: 18px;
+	margin: 15px 0px 15px 0px;
+	font-family: "黑体";
+
+}
+.sright{
+    text-align:right;
+}
