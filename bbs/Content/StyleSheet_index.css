@@ -27,6 +27,73 @@
     font-size:16px
 }
 
+
+.xw{font-size:24px;
+font-style:italic;
+margin-top:5px;
+margin-left:30px;
+margin-right:80px;
+color:#339966}
+.navbar-inverse {
+background-color: #324919;}
+.carousel{
+	height: 250px;
+	margin-bottom: 15px;
+}
+.carousel .item{
+	height: 250px;
+}
+.carousel .item img{
+	width: 100%;
+}
+
+.style-lered-coblue{
+	border-left: 5px solid #9e0000;
+	padding-left: 10px;
+	color:#417B3C;
+	font-family: "黑体";
+	margin-top:10px;
+	font-size: 18px;
+}
+
+.cogr{font-size:14px;
+font-family: "黑体";
+margin-top:30px}
+.gray{font-family: "幼圆";
+font-size:16px;
+margin-top:15px;
+color:#666699}
+h6{margin-left:150px;
+}
+.cogg{margin-top:50px;
+color:#141849}
+.fright{float:right}
+
+ .event-item {
+float: left;
+margin-bottom: 20px;
+margin-right: 16px;}
+.cover-wrapper {
+display: block;
+float: left;
+width: 120px;
+overflow: hidden;
+}
+ .info {
+float: right;
+margin-left: 15px;
+width: 172px;
+overflow: hidden;
+}
+ .meta{
+     color: #7d7d7d;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+}
+.cobb{font-size:16px}
+.row{margin-top:20px}
+
 .pd-t {
     margin-top:10px;
     margin-right:50px;
@@ -41,7 +108,6 @@
 .sright{
     text-align:right;
 }
-.jumbotron {
-    margin:0px 0px 50px 0px;
-    padding:0px 0px 0px 0px;
+.navbar {
+    margin-bottom:30px;
 }
