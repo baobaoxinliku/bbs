@@ -230,6 +230,10 @@
     <Content Include="html\images\little.jpg" />
     <Content Include="html\images\logo.jpg" />
     <Content Include="html\images\t01995455c001df7ea9.jpg" />
+    <Content Include="html\images\T1-1.jpg" />
+    <Content Include="html\images\T1.jpg" />
+    <Content Include="html\images\T2.jpg" />
+    <Content Include="html\images\T3.jpg" />
     <Content Include="html\images\片刻网 - 用文字交换世界.png" />
     <Content Include="html\index.html" />
     <Content Include="html\json\json.json" />
