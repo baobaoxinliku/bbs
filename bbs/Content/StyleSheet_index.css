@@ -28,14 +28,23 @@
 }
 
 
-.xw{font-size:24px;
-font-style:italic;
-margin-top:5px;
-margin-left:30px;
-margin-right:80px;
-color:#339966}
-.navbar-inverse {
-background-color: #324919;}
+.pd-t {
+    margin-top:10px;
+    margin-right:50px;
+}
+.style-border-left-blue{
+	padding: 2px 0px 2px 10px;
+	border-left: 3px solid #9e0000;
+	font-size: 18px;
+	margin: 15px 0px 15px 0px;
+	font-family: "黑体";
+}
+.sright{
+    text-align:right;
+}
+.navbar {
+    margin-bottom:30px;
+}
 .carousel{
 	height: 250px;
 	margin-bottom: 15px;
@@ -46,68 +55,10 @@ background-color: #324919;}
 .carousel .item img{
 	width: 100%;
 }
-
-.style-lered-coblue{
-	border-left: 5px solid #9e0000;
-	padding-left: 10px;
-	color:#417B3C;
-	font-family: "黑体";
-	margin-top:10px;
-	font-size: 18px;
-}
-
-.cogr{font-size:14px;
-font-family: "黑体";
-margin-top:30px}
-.gray{font-family: "幼圆";
-font-size:16px;
-margin-top:15px;
-color:#666699}
-h6{margin-left:150px;
-}
-.cogg{margin-top:50px;
-color:#141849}
-.fright{float:right}
-
- .event-item {
-float: left;
-margin-bottom: 20px;
-margin-right: 16px;}
-.cover-wrapper {
-display: block;
-float: left;
-width: 120px;
-overflow: hidden;
-}
- .info {
-float: right;
-margin-left: 15px;
-width: 172px;
-overflow: hidden;
-}
- .meta{
-     color: #7d7d7d;
-     overflow: hidden;
-     text-overflow: ellipsis;
-     white-space: nowrap;
-}
-.cobb{font-size:16px}
-.row{margin-top:20px}
-
-.pd-t {
-    margin-top:10px;
-    margin-right:50px;
-}
-.style-border-left-blue{
-	padding: 2px 0px 2px 10px;
-	border-left: 3px solid #1874CD;
-	font-size: 18px;
-	margin: 15px 0px 15px 0px;
-	font-family: "黑体";
-}
-.sright{
-    text-align:right;
-}
-.navbar {
-    margin-bottom:30px;
+.footer {
+    background-color:#101010;
+    color:#9d9d9d;
+    text-align:center;
+    padding-top:30px;
+    padding-bottom:30px;
 }
