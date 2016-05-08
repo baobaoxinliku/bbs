@@ -14,7 +14,27 @@ namespace bbs.html.ashx
         public void ProcessRequest(HttpContext context)
         {
             context.Response.ContentType = "text/plain";
-            context.Response.Write("Hello World");
+            string json = "{'info':'增加数据失败'}";
+
+            string ttopic = context.Request.Form["ttopic"];
+            string tcontents = context.Request.Form["tcontents"];
+
+            Model.BBSTopic model = new Model.BBSTopic();
+            model.TTopic = ttopic;
+            model.TContents = tcontents;
+
+            model.TTime = DateTime.Now;
+            model.TClickCount = 0;
+            model.TLastClickT = DateTime.Now;
+            model.TReplyCount = 0;
+
+            Bll.Admin bll = new Bll.Admin();
+            int n = bll.posting(model);
+            if (n > 0)
+            {
+                json = "{'info':'增加数据成功，编号是：" + n + "'}";
+            }
+            context.Response.Write(json);
         }
 
         public bool IsReusable

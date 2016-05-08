@@ -23,5 +23,9 @@ namespace Bll
         {
             return dal.add_section(model);
         }
+        public int posting(BBSTopic model)
+        {
+            return dal.posting(model);
+        }
     }
 }
