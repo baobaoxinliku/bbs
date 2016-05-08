@@ -80,7 +80,17 @@ namespace SqlServerDal
 
         public int posting(Model.BBSTopic model)
         {
-            string sql = "";
+            string sql = string.Format(@"insert into [BBSTopic](
+            [ttopic],
+            [tcontents],
+            [ttime],
+            [tclickcount],
+            [tlastclickt],
+            [treplycount],
+            [tsid],
+            [tuid])
+            values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}');select @@identity",
+             model.TTopic,model.TContents,model.TTime,model.TClickCount,model.TLastClickT,model.TReplyCount,model.TSID,model.TUID) ;
             object obj = DbHelperSQL.GetSingle(sql);
             if (obj == null)
             {

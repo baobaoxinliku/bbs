@@ -10,7 +10,7 @@
                 datatype: "text",
                 success: function (data) {
                     var json = eval('(' + data + ')');
-                    alert(json.info + "登录成功");
+                    alert(json.info + "发帖成功");
                     //window.location.href = "";
                 },
                 error: function (err) {

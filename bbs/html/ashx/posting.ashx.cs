@@ -14,7 +14,7 @@ namespace bbs.html.ashx
         public void ProcessRequest(HttpContext context)
         {
             context.Response.ContentType = "text/plain";
-            string json = "{'info':'增加数据失败'}";
+            string json = "{'info':'发帖失败'}";
 
             string ttopic = context.Request.Form["ttopic"];
             string tcontents = context.Request.Form["tcontents"];
@@ -32,7 +32,7 @@ namespace bbs.html.ashx
             int n = bll.posting(model);
             if (n > 0)
             {
-                json = "{'info':'增加数据成功，编号是：" + n + "'}";
+                json = "{'info':'发帖成功，编号是：" + n + "'}";
             }
             context.Response.Write(json);
         }
