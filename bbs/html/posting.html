@@ -4,28 +4,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>News-edit</title>
+    <title>一枝阁——发帖</title>
 
-    <!-- Bootstrap -->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="../Scripts/jquery-1.10.2.min.js"></script>
-    <!-- Include all compiled plugins (belo w), or include individual files as needed -->
     <script src="../Scripts/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Content/bootstrap.min.css">
 
-    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
     <link href="http://cdn.bootcss.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
     <!-- include summernote css/js-->
-    <link href="../../Content/summernote.css" rel="stylesheet">
-    <script src="../../Scripts/summernote.min.js"></script>
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <link href="../Content/summernote.css" rel="stylesheet">
+    <script src="../Scripts/summernote.min.js"></script>
+    <script src="js/posting.js"></script>
 </head>
 <body>
     <!-- 导航条 -->
@@ -43,7 +33,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li><a href="index.html">首页</a></li>
-                    <li><a href="BBSTopic/posting.html">发帖</a></li>
+                    <li><a href="posting.html">发帖</a></li>
                     <li><a href="三级页面.html">资讯</a></li>
                 </ul>
                 <div class="right">
@@ -56,16 +46,15 @@
         </div>
     </nav>
     <div class="container">
-        主贴标题：<input type="text" id="TTopic"/>
-        <div id="summernote">
-            请输入内容....
-        </div>
+        主贴标题：<input type="text" id="ttopic"/>
+        <div id="summernote"></div>
         <input type="button" id="btn_ok" value="提交" />
         <input type="button" id="btn_clear" value="清空" />
     </div>
     <script>
       $(document).ready(function(){
-        $('#summernote').summernote();
+          $('#summernote').summernote();
+          var aaa = $('.summernote').code();
       });
       $('#summernote').summernote({
           height: 300, // set editor height

@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     $("#btn_ok").click(function () {
-        var TTopic = $("#TTopic").val();
-        var TContents = $("#summernote").val();
+        var TTopic = $("#ttopic").val();
+        var TContents = $("#summernote").code();
         if (TTopic != "" && TContents != "") {
             $.ajax({
                 type: "post",
@@ -21,5 +21,9 @@
         else {
             alert("请重新输入");
         }
-    })
+    });
+    $("#btn_clear").click(function () {
+        $("#ttopic").val('');
+        $("#summernote").code('');
+    });
 });

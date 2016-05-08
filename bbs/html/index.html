@@ -4,24 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ --   >
-    <title></title>
-
-    <!-- Bootstrap -->
-    <!-- 新 Bootstrap 核心 CSS 文件 -->
-    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
-    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-
+    <title>一枝阁</title>
+    <link rel="stylesheet" href="../Content/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../Content/StyleSheet_index.css">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 <body>
     <!-- 导航条 -->
@@ -34,24 +19,35 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="index.html"><img src="images/logo.jpg" width="150" height="50"></a><p></p>
+                <a href="index.html"><img src="images/logo.jpg" width="150" height="50"></a>
+                <p></p>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="index.html">首页</a></li>
-                    <li><a href="BBSTopic/posting.html">发帖</a></li>
-                    <li><a href="三级页面.html">资讯</a></li>
+                    <li>
+                        <a href="index.html">首页</a>
+                    </li>
+                    <li>
+                        <a href="posting.html">发帖</a>
+                    </li>
+                    <li>
+                        <a href="三级页面.html">资讯</a>
+                    </li>
                 </ul>
                 <div class="right">
                     <ul class="nav navbar-nav navbar-right">
-                        <li role="presentation"><a href="login.html">登录</a></li>
-                        <li role="presentation"><a href="register.html">注册</a></li>
+                        <li role="presentation">
+                            <a href="login.html">登录</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="register.html">注册</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </nav>
-    <!-- 轮播 -->
+    <!-- 焦点图 -->
     <div class="container">
         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
@@ -68,12 +64,12 @@
                     </div>
                 </div>
                 <div class="item">
-                     <a href="#"><img src="images/41.jpg" alt="..."></a>
+                    <a href="#"><img src="images/41.jpg" alt="..."></a>
                     <div class="carousel-caption">
                     </div>
                 </div>
                 <div class="item">
-                     <a href="#"><img src="images/42.jpg" alt="..."></a>
+                    <a href="#"><img src="images/42.jpg" alt="..."></a>
                     <div class="carousel-caption">
                     </div>
                 </div>
@@ -89,154 +85,166 @@
             </a>
         </div>
     </div>
-        <!--内容 -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-9">
-                    <h2 class="style-border-left-red">热门论坛</h2>
-                    <div class="col-md-12">
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">最新帖子</a></li>
-                                <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">最新回复</a></li>
-                                <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">精华主题</a></li>
-                            </ul>
-                            <!-- Tab panes -->
-                            <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active" id="home">
-                                    <a href="#" class="list-group-item">当三甲医院也做了“医骗”比电信诈骗更可怕<span class="badge">17：56</span></a>
-                                    <a href="#" class="list-group-item">东京审判70年 中文庭审记录问世<span class="badge">17：50</span></a>
-                                    <a href="#" class="list-group-item">旅游局发布黑名单:张家界中青旅国旅等上榜<span class="badge">17：46</span></a>
-                                    <a href="#" class="list-group-item">中国游客五一游现冰火两重天:韩日火爆港台低迷<span class="badge">17：43</span></a>
-                                    <a href="#" class="list-group-item">云记者直击梅葆玖追悼会现场：弟子跪地痛哭<span class="badge">17：36</span></a>
-                                    <a href="#" class="list-group-item">卫计委中央军委等联合调查武警北京二院<span class="badge">17：30</span></a>
-                                </div>
-                                <div role="tabpanel" class="tab-pane" id="profile">
-                                    <a href="#" class="list-group-item">杭州已有少数游客打消赴韩旅游念头韩旅游念头韩旅游念头<span class="badge">56</span></a>
-                                    <a href="#" class="list-group-item">“迷人的哈尔滨之夏”6月13日启幕 奏响魅力冰城“交响乐”<span class="badge">56</span></a>
-                                    <a href="#" class="list-group-item">移动营销：旅游景区玩转微营销三部曲<span class="badge">56</span></a>
-                                    <a href="#" class="list-group-item">毕业旅行季，提提卡卡给你欧洲旅游攻略<span class="badge">56</span></a>
-                                    <a href="#" class="list-group-item">走访书隐楼，感受老宅的历史与沧桑<span class="badge">56</span></a>
-                                    <a href="#" class="list-group-item">A股市值单日蒸发4万亿 股民人均赔2万<span class="badge">56</span></a>
-                                </div>
-                                <div role="tabpanel" class="tab-pane" id="messages">
-                                    <a href="#" class="list-group-item">南京女童疑被家人遗弃街头 梦中直喊妈妈</a>
-                                    <a href="#" class="list-group-item">心脏病廉价救命药全国性缺货 大批患者无法手术</a>
-                                    <a href="#" class="list-group-item">曝陈忠实去世前亲笔信：化疗使我失却记忆</a>
-                                    <a href="#" class="list-group-item">2016各城市平均薪酬为7018元 你拖后腿了吗</a>
-                                    <a href="#" class="list-group-item">揭秘手机回收中的猫腻：原来是这样“行骗”</a>
-                                    <a href="#" class="list-group-item">江西头号老赖引爆官场地震 副国级“老虎”涉案</a>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-                <div class="col-md-3">
-                    11
-                </div>
-            </div>
-            <h2 class="style-border-left-red">推荐帖子</h2>
-            <div class="media">
-                <div class="media-left">
-                    <a href="#">
-                        <img class="media-object" src="images/46.jpg" alt="..." width="150" height="150">
-                    </a>
-                </div>
-                <div class="media-body">
-                    <h4 class="media-heading"><strong>别人凭什么要看到你的努力？</strong></h4>
-                    <p>发布于：12月18日 10:48 阅读时间：6 min 阅读次数：31258 #故事  励志</p>
-                    <p>别人都说我是一个努力的人，从小到大都是。前两年大三那会儿，大多数同学都还在校园里玩着游戏虚度光阴，我为了离我所钟爱的媒体行业更近一点，开始在各种渠道找寻实习信息。</p>
-                    <p>我们觉得自己努力，很多时候都是太过主观，有多少自以为的努力，在别人看来其实都是理所应当。所以每次我们遇到挫折，不要老想着抱怨，也不要找借口说我已经努力了，而是应该审视自己是否真的努力了...</p>
-                    <p>来自 自由写作 共有26436人阅读</p>
-                    <ul class="pager">
-                        <li class="next"><a href="#">更多推荐<span aria-hidden="true">&rarr;</span></a></li>
+    <!--内容 -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <h2 class="style-border-left-red">热门论坛</h2>
+                <div class="col-md-12">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active">
+                            <a href="#home" aria-controls="home" role="tab" data-toggle="tab">最新帖子</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">最新回复</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">精华主题</a>
+                        </li>
                     </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="home">
+                            <a href="#" class="list-group-item">当三甲医院也做了“医骗”比电信诈骗更可怕<span class="badge">17：56</span></a>
+                            <a href="#" class="list-group-item">东京审判70年 中文庭审记录问世<span class="badge">17：50</span></a>
+                            <a href="#" class="list-group-item">旅游局发布黑名单:张家界中青旅国旅等上榜<span class="badge">17：46</span></a>
+                            <a href="#" class="list-group-item">中国游客五一游现冰火两重天:韩日火爆港台低迷<span class="badge">17：43</span></a>
+                            <a href="#" class="list-group-item">云记者直击梅葆玖追悼会现场：弟子跪地痛哭<span class="badge">17：36</span></a>
+                            <a href="#" class="list-group-item">卫计委中央军委等联合调查武警北京二院<span class="badge">17：30</span></a>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="profile">
+                            <a href="#" class="list-group-item">杭州已有少数游客打消赴韩旅游念头韩旅游念头韩旅游念头<span class="badge">56</span></a>
+                            <a href="#" class="list-group-item">“迷人的哈尔滨之夏”6月13日启幕 奏响魅力冰城“交响乐”<span class="badge">56</span></a>
+                            <a href="#" class="list-group-item">移动营销：旅游景区玩转微营销三部曲<span class="badge">56</span></a>
+                            <a href="#" class="list-group-item">毕业旅行季，提提卡卡给你欧洲旅游攻略<span class="badge">56</span></a>
+                            <a href="#" class="list-group-item">走访书隐楼，感受老宅的历史与沧桑<span class="badge">56</span></a>
+                            <a href="#" class="list-group-item">A股市值单日蒸发4万亿 股民人均赔2万<span class="badge">56</span></a>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="messages">
+                            <a href="#" class="list-group-item">南京女童疑被家人遗弃街头 梦中直喊妈妈</a>
+                            <a href="#" class="list-group-item">心脏病廉价救命药全国性缺货 大批患者无法手术</a>
+                            <a href="#" class="list-group-item">曝陈忠实去世前亲笔信：化疗使我失却记忆</a>
+                            <a href="#" class="list-group-item">2016各城市平均薪酬为7018元 你拖后腿了吗</a>
+                            <a href="#" class="list-group-item">揭秘手机回收中的猫腻：原来是这样“行骗”</a>
+                            <a href="#" class="list-group-item">江西头号老赖引爆官场地震 副国级“老虎”涉案</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <h2 class="style-border-left-red">24小时热点</h2>
-            <!-- hot -->
-            <div class="row">
-                <div class="col-md-3">
-                    <h4>大家都在看</h4>
-                    <a href="#" class="thumbnail">
-                        <img src="images/8.png" alt="...">
-                    </a>
-                    <h5>关于你</h5>
-                    推荐数1127
-                </div>
-                <div class="col-md-3">
-                    <h4>心情最复杂</h4>
-                    <a href="#" class="thumbnail">
-                        <img src="images/10.jpg" alt="...">
-                    </a>
-                    <h5>睡前故事</h5>
-                    推荐数860
-                </div>
-                <div class="col-md-3">
-                    <h4>大家都喜欢</h4>
-                    <a href="#" class="thumbnail">
-                        <img src="images/9.jpg" alt="...">
-                    </a>
-                    <h5>最好年纪遇上最...</h5>
-                    推荐数987
-                </div>
-                <div class="col-xs-6 col-md-3">
-                    <h4>众人瞩目</h4>
-                    <a href="#" class="thumbnail">
-                        <img src="images/11.jpg" alt="...">
-                    </a>
-                    <h5>小嗔</h5>
-                    粉丝增长了587
-                </div>
+            <div class="col-md-3">
+                11
             </div>
-            <div class="row">
-                <div class="col-md-3">
-                    <h4>热门文集</h4>
-                    <a href="#" class="thumbnail">
-                        <img src="images/13.jpg" alt="...">
-                    </a>
-                    <h5>缪斯的侧影</h5>新增37个粉丝
-                </div>
-                <div class="col-md-3">
-                    <h4>年少时</h4>
-                    <a href="#" class="thumbnail">
-                        <img src="images/14.jpg" alt="...">
-                    </a>
-                    <h5>我们</h5>
-                    推荐数765
-                </div>
-                <div class="col-md-3">
-                    <h4>闺蜜大过天</h4>
-                    <a href="#" class="thumbnail">
-                        <img src="images/15.jpg" alt="...">
-                    </a>
-                    <h5>朋友比情人更懂得...</h5>
-                    推荐数582
-                </div>
-                <div class="col-md-3">
-                    <h4>属于你的空间</h4>
-                    <a href="#" class="thumbnail">
-                        <img src="images/16.jpg" alt="...">
-                    </a>
-                    <h5>一个人的旅行</h5>
-                    获得了58条评论
-                </div>
-            </div>
-            <p class="pull-right">
-                <ul class="pager">
-                    <li class="next"><a href="#">更多资讯<span aria-hidden="true">&rarr;</span></a></li>
-                </ul>
-            </p>
         </div>
-        <!-- 底部 -->
+        <h2 class="style-border-left-red">推荐帖子</h2>
+        <div class="media">
+            <div class="media-left">
+                <a href="#">
+                    <img class="media-object" src="images/46.jpg" alt="..." width="150" height="150">
+                </a>
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading">
+                    <strong>别人凭什么要看到你的努力？</strong>
+                </h4>
+                <p>发布于：12月18日 10:48 阅读时间：6 min 阅读次数：31258 #故事  励志</p>
+                <p>别人都说我是一个努力的人，从小到大都是。前两年大三那会儿，大多数同学都还在校园里玩着游戏虚度光阴，我为了离我所钟爱的媒体行业更近一点，开始在各种渠道找寻实习信息。</p>
+                <p>我们觉得自己努力，很多时候都是太过主观，有多少自以为的努力，在别人看来其实都是理所应当。所以每次我们遇到挫折，不要老想着抱怨，也不要找借口说我已经努力了，而是应该审视自己是否真的努力了...</p>
+                <p>来自 自由写作 共有26436人阅读</p>
+                <ul class="pager">
+                    <li class="next">
+                        <a href="#">更多推荐<span aria-hidden="true">&rarr;</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <h2 class="style-border-left-red">24小时热点</h2>
+        <!-- hot -->
+        <div class="row">
+            <div class="col-md-3">
+                <h4>大家都在看</h4>
+                <a href="#" class="thumbnail">
+                    <img src="images/8.png" alt="...">
+                </a>
+                <h5>关于你</h5>
+                推荐数1127
+            </div>
+            <div class="col-md-3">
+                <h4>心情最复杂</h4>
+                <a href="#" class="thumbnail">
+                    <img src="images/10.jpg" alt="...">
+                </a>
+                <h5>睡前故事</h5>
+                推荐数860
+            </div>
+            <div class="col-md-3">
+                <h4>大家都喜欢</h4>
+                <a href="#" class="thumbnail">
+                    <img src="images/9.jpg" alt="...">
+                </a>
+                <h5>最好年纪遇上最...</h5>
+                推荐数987
+            </div>
+            <div class="col-xs-6 col-md-3">
+                <h4>众人瞩目</h4>
+                <a href="#" class="thumbnail">
+                    <img src="images/11.jpg" alt="...">
+                </a>
+                <h5>小嗔</h5>
+                粉丝增长了587
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <h4>热门文集</h4>
+                <a href="#" class="thumbnail">
+                    <img src="images/13.jpg" alt="...">
+                </a>
+                <h5>缪斯的侧影</h5>新增37个粉丝
+            </div>
+            <div class="col-md-3">
+                <h4>年少时</h4>
+                <a href="#" class="thumbnail">
+                    <img src="images/14.jpg" alt="...">
+                </a>
+                <h5>我们</h5>
+                推荐数765
+            </div>
+            <div class="col-md-3">
+                <h4>闺蜜大过天</h4>
+                <a href="#" class="thumbnail">
+                    <img src="images/15.jpg" alt="...">
+                </a>
+                <h5>朋友比情人更懂得...</h5>
+                推荐数582
+            </div>
+            <div class="col-md-3">
+                <h4>属于你的空间</h4>
+                <a href="#" class="thumbnail">
+                    <img src="images/16.jpg" alt="...">
+                </a>
+                <h5>一个人的旅行</h5>
+                获得了58条评论
+            </div>
+        </div>
+        <p class="pull-right">
+            <ul class="pager">
+                <li class="next">
+                    <a href="#">更多资讯<span aria-hidden="true">&rarr;</span></a>
+                </li>
+            </ul>
+        </p>
+    </div>
+    <!-- 底部 -->
     <div class="footer">
         关于我们
-        友情链接 
+        友情链接
         官方博客
         意见反馈
         成长日记
     </div>
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="../Scripts/jquery-1.10.2.min.js"></script>
-        <!-- Include all compiled plugins (belo w), or include individual files as needed -->
-        <script src="../Scripts/bootstrap.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../Scripts/jquery-1.10.2.min.js"></script>
+    <!-- Include all compiled plugins (belo w), or include individual files as needed -->
+    <script src="../Scripts/bootstrap.min.js"></script>
 </body>
 </html>

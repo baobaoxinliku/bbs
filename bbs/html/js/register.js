@@ -36,7 +36,7 @@
 
     //注册重置按钮单击事件
     $("#btn_clear").click(function () {
-        $("#uname").val('')
+        $("#uname").val('');
         $("#upassword").val('');
         $("#uemail").val('');
         $("#ubirthday").val('');
