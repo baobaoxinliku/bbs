@@ -1,50 +1,4 @@
-﻿.code{
-    padding-top:10px;
-    margin-left:50px
-}
-.navbar{
-    margin-bottom:0px;
-}
-@media(max-width:1000px){
-	.carousel{ height:175px;}
-	.carousel .item{ height:175px;}
-}
-.big{
-    background-image:url(images/big.jpg);
-    width:1200px;
-    height:800px
-}
-.wenzi{
-    padding-left:30px;
-    padding-top:30px;
-    color:#336633
-}
-.navbar-header{
-    margin-top:15px;
-    color:#999999;
-    padding-left:30px;
-    margin-top:20px;
-    font-size:16px
-}
-
-
-.pd-t {
-    margin-top:10px;
-    margin-right:50px;
-}
-.style-border-left-blue{
-	padding: 2px 0px 2px 10px;
-	border-left: 3px solid #9e0000;
-	font-size: 18px;
-	margin: 15px 0px 15px 0px;
-	font-family: "黑体";
-}
-.sright{
-    text-align:right;
-}
-.navbar {
-    margin-bottom:30px;
-}
+﻿/*焦点图*/
 .carousel{
 	height: 250px;
 	margin-bottom: 15px;
@@ -54,6 +8,14 @@
 }
 .carousel .item img{
 	width: 100%;
+}
+
+.style-border-left-red{
+	padding: 2px 0px 2px 10px;
+	border-left: 3px solid #9e0000;
+	font-size: 18px;
+	margin: 15px 0px 15px 0px;
+	font-family: "黑体";
 }
 .footer {
     background-color:#101010;

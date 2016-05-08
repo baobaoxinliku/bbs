@@ -175,6 +175,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\StyleSheet_index.css" />
+    <Content Include="Content\summernote.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -183,6 +184,8 @@
     <Content Include="html\ashx\register.ashx" />
     <Content Include="html\BBSSection\add_section.html" />
     <Content Include="html\BBSSection\js\add_section.js" />
+    <Content Include="html\js\posting.js" />
+    <Content Include="html\posting.html" />
     <Content Include="html\images\1.jpg" />
     <Content Include="html\images\10.jpg" />
     <Content Include="html\images\11.jpg" />
@@ -236,9 +239,9 @@
     <Content Include="html\images\T3.jpg" />
     <Content Include="html\images\片刻网 - 用文字交换世界.png" />
     <Content Include="html\index.html" />
-    <Content Include="html\json\json.json" />
     <Content Include="html\ashx\login.ashx" />
     <Content Include="html\BBSSection\ashx\add_section.ashx" />
+    <Content Include="html\ashx\posting.ashx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="html\js\login.js" />
     <Content Include="html\js\register.js" />
@@ -252,6 +255,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\summernote.min.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
     <Content Include="Scripts\WebForms\GridView.js" />
@@ -430,6 +434,9 @@
     <Compile Include="html\ashx\login.ashx.cs">
       <DependentUpon>login.ashx</DependentUpon>
     </Compile>
+    <Compile Include="html\ashx\posting.ashx.cs">
+      <DependentUpon>posting.ashx</DependentUpon>
+    </Compile>
     <Compile Include="html\ashx\register.ashx.cs">
       <DependentUpon>register.ashx</DependentUpon>
     </Compile>
@@ -463,9 +470,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="html\BBSReply\" />
-    <Folder Include="html\BBSTopic\" />
-    <Folder Include="html\BBSUsers\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Bll\Bll.csproj">
