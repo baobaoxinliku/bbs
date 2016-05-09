@@ -173,6 +173,7 @@
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\pagination.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\StyleSheet_index.css" />
     <Content Include="Content\summernote.css" />
@@ -184,6 +185,7 @@
     <Content Include="html\ashx\register.ashx" />
     <Content Include="html\BBSSection\add_section.html" />
     <Content Include="html\BBSSection\js\add_section.js" />
+    <Content Include="html\js\articlelist.js" />
     <Content Include="html\js\posting.js" />
     <Content Include="html\posting.html" />
     <Content Include="html\images\1.jpg" />
@@ -242,16 +244,20 @@
     <Content Include="html\ashx\login.ashx" />
     <Content Include="html\BBSSection\ashx\add_section.ashx" />
     <Content Include="html\ashx\posting.ashx" />
+    <Content Include="html\ashx\articlelist.ashx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="html\js\login.js" />
     <Content Include="html\js\register.js" />
     <Content Include="html\login.html" />
     <Content Include="html\nav.html" />
     <Content Include="html\register.html" />
+    <Content Include="html\articlelist.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery.pagination1.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -431,6 +437,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="App_Code\MessageBox.cs" />
+    <Compile Include="html\ashx\articlelist.ashx.cs">
+      <DependentUpon>articlelist.ashx</DependentUpon>
+    </Compile>
     <Compile Include="html\ashx\login.ashx.cs">
       <DependentUpon>login.ashx</DependentUpon>
     </Compile>
