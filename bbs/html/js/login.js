@@ -22,4 +22,8 @@
             alert("请重新输入");
         }
     })
+    $("#btn_clear").click(function(){
+        var uname = $("#uname").val('');
+        var upassword = $("#upassword").val('');
+    })
 });
