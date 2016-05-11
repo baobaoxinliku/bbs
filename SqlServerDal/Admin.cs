@@ -45,11 +45,11 @@ namespace SqlServerDal
         public int login(Model.BBSUsers model1)//登录
         {
             StringBuilder sql = new StringBuilder();
-            sql.Append("select * from BBSUsers where uname=" + model1.UName + " and upassword=" + model1.UPassword);
+            sql.Append("select * from BBSUsers where uname='" + model1.UName + "' and upassword='" + model1.UPassword+"'");
             object obj = DbHelperSQL.GetSingle(sql.ToString());
             if (obj == null)
             {
-                return -1;
+                return 0;
             }
             else
             {

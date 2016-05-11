@@ -20,6 +20,8 @@ namespace bbs.html.ashx
             //获取GET方法传递参数：Request.QueryString["参数名称"];
             //获取POST方法传递参数：Request.Form["参数名称"];
             string uname = context.Request.Form["uname"];
+            
+            
             string upassword = context.Request.Form["upassword"];
             string uemail = context.Request.Form["uemail"];
             string ubirthday = context.Request.Form["ubirthday"];

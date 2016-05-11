@@ -10,8 +10,8 @@
                 datatype: "text",
                 success: function (data) {
                     var json = eval('(' + data + ')');
-                    alert(json.info + "登录成功");
-                    //window.location.href = "";
+                    alert(json.info);
+                    window.location.href = "index.html";
                 },
                 error: function (err) {
                     alert(err);

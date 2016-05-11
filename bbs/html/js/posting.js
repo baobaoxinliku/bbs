@@ -2,6 +2,7 @@
     $("#btn_ok").click(function () {
         var TTopic = $("#ttopic").val();
         var TContents = $("#summernote").code();
+        alert(TContents);
         if (TTopic != "" && TContents != "") {
             $.ajax({
                 type: "post",
