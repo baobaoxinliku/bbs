@@ -17,8 +17,8 @@ namespace bbs.html.ashx
             string json = "{'info':'发帖失败'}";
 
             string ttopic = context.Request.Form["ttopic"];
-            string tcontents = context.Request.Form["tcontents"];
-
+            string tcontents = context.Request.Form["TContents"];
+            tcontents = HttpContext.Current.Server.UrlDecode(tcontents);//反编码
             Model.BBSTopic model = new Model.BBSTopic();
             model.TTopic = ttopic;
             model.TContents = tcontents;

@@ -82,7 +82,7 @@ namespace SqlServerDal
         {
             string sql = string.Format(@"insert into [BBSTopic](
             [ttopic],
-            [tcontents],
+            [TContents],
             [ttime],
             [tclickcount],
             [tlastclickt],

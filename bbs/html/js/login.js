@@ -11,9 +11,7 @@
                 success: function (data) {
                     var json = eval('(' + data + ')');
                     alert(json.info);
-                    window.location.href = "index.html";
-
-
+                    window.location.href = "\index.html";
                 },
                 error: function (err) {
                     alert(err);

@@ -7,7 +7,7 @@
             $.ajax({
                 type: "post",
                 url: "ashx/posting.ashx",
-                data: { "TTopic": TTopic, "TContents": TContents },
+                data: { "TTopic": TTopic, "TContents": encodeURIComponent(TContents) },
                 datatype: "text",
                 success: function (data) {
                     var json = eval('(' + data + ')');

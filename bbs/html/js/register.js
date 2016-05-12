@@ -23,7 +23,7 @@
                 success: function (data) {
                     var json = eval('(' + data + ")");
                     alert(json.info);
-                    window.location.href = "login.html";
+                    window.location.href = "\login.html";
                 },
                 error: function (err) {
                     alert(err);
