@@ -183,6 +183,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
+    <Content Include="html\addsection.html" />
     <Content Include="html\ashx\register.ashx" />
     <Content Include="html\BBSSection\add_section.html" />
     <Content Include="html\BBSSection\js\add_section.js" />
