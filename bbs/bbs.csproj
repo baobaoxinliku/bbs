@@ -253,6 +253,7 @@
     <Content Include="html\nav.html" />
     <Content Include="html\register.html" />
     <Content Include="html\articlelist.html" />
+    <Content Include="html\ShaBi.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
