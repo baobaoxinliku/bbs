@@ -46,10 +46,19 @@
         </div>
     </nav>
     <div class="container">
-        主贴标题：<input type="text" id="ttopic"/>
+        <p>主贴标题：<input type="text" id="ttopic" /></p>
+        <p>
+            主题分类：
+            <select id="Select1">
+                <option>灌水堂</option>
+                <option>游戏厅</option>
+            </select>
+        </p>
         <div id="summernote"></div>
-        <input type="button" id="btn_ok" value="提交" />
-        <input type="button" id="btn_clear" value="清空" />
+        <p>
+            <input type="button" id="btn_ok" value="提交" />
+            <input type="button" id="btn_clear" value="清空" />
+        </p>
     </div>
     <script>
       $(document).ready(function(){
