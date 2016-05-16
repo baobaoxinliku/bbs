@@ -186,6 +186,7 @@
     <Content Include="html\ashx\register.ashx" />
     <Content Include="html\BBSSection\add_section.html" />
     <Content Include="html\BBSSection\js\add_section.js" />
+    <Content Include="html\js\addsection.js" />
     <Content Include="html\js\articlelist.js" />
     <Content Include="html\js\posting.js" />
     <Content Include="html\posting.html" />
@@ -246,6 +247,7 @@
     <Content Include="html\BBSSection\ashx\add_section.ashx" />
     <Content Include="html\ashx\posting.ashx" />
     <Content Include="html\ashx\articlelist.ashx" />
+    <Content Include="html\ashx\addsection.ashx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="html\js\login.js" />
     <Content Include="html\js\register.js" />
@@ -440,6 +442,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="App_Code\MessageBox.cs" />
+    <Compile Include="html\ashx\addsection.ashx.cs">
+      <DependentUpon>addsection.ashx</DependentUpon>
+    </Compile>
     <Compile Include="html\ashx\articlelist.ashx.cs">
       <DependentUpon>articlelist.ashx</DependentUpon>
     </Compile>

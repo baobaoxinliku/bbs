@@ -2,10 +2,31 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>新增板块</title>
 	<meta charset="utf-8" />
 </head>
 <body>
-
+    <!-- 导航条 -->
+    <iframe src="nav.html" height="50" width="100%" frameborder="0" scrolling="no"></iframe>
+    <table>
+        <tr>
+            <td>板块名字：</td>
+            <td><input type="text" id="sname" /></td>
+        </tr>
+        <tr>
+            <td>板主编号：</td>
+            <td><input type="text" id="smaster" /></td>
+        </tr>
+        <tr>
+            <td>板块说明：</td>
+            <td><input type="text" id="sstatement" /></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="button" id="btn_ok" value="新增" />
+                <input type="button" id="btn_clear" value="重置" />
+            </td>
+        </tr>
+    </table>
 </body>
 </html>
