@@ -19,9 +19,9 @@ namespace Bll
         {
             return dal.login(model);
         }
-        public int add_setion(BBSSection model)
+        public int addsetion(BBSSection model)
         {
-            return dal.add_section(model);
+            return dal.addsection(model);
         }
         public int posting(BBSTopic model)
         {

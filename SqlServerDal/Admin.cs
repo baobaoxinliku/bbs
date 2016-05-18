@@ -57,7 +57,7 @@ namespace SqlServerDal
             }
         }
 
-        public int add_section(Model.BBSSection model1)//新增板块
+        public int addsection(Model.BBSSection model1)//新增板块
         {
             string sql = string.Format(@"insert into [BBSSection](
             [sname],

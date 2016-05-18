@@ -23,10 +23,14 @@ namespace bbs.html.ashx
             Model.BBSSection model = new Model.BBSSection();
             model.SName = sname;
             model.SMasterID = int.Parse(smasterid);
+            model.SStatement = sstatement;
+
+            model.STopicCount = 0;
+            model.SClickCount = 0;
 
 
             Bll.Admin bll = new Bll.Admin();
-            int n = bll.add_setion(model);
+            int n = bll.addsetion(model);
             if (n > 0)
             {
                 json = "{'info':'增加数据成功，编号是：" + n + "'}";
