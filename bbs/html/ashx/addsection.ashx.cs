@@ -22,12 +22,12 @@ namespace bbs.html.ashx
 
             Model.BBSSection model = new Model.BBSSection();
             model.SName = sname;
-            model.SMasterID = int.Parse(smasterid);
+            
             model.SStatement = sstatement;
 
             model.STopicCount = 0;
             model.SClickCount = 0;
-
+            model.SMasterID = int.Parse(smasterid);
 
             Bll.Admin bll = new Bll.Admin();
             int n = bll.addsetion(model);

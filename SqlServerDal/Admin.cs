@@ -65,7 +65,7 @@ namespace SqlServerDal
             [sstatement],
             [sclickcount],
             [stopiccount])
-            values('{0}','{1}','{2}','{3}',{4});select @@identity",
+            values('{0}',{1},'{2}',{3},{4});select @@identity",
             model1.SName, model1.SMasterID, model1.SStatement, model1.SClickCount, model1.STopicCount);
             object obj = DbHelperSQL.GetSingle(sql);
             if (obj == null)
