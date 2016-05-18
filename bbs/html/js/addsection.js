@@ -1,13 +1,13 @@
 ﻿$(document).ready(function () {
     $("#btn_ok").click(function () {
         var sname = $("#sname").val();
-        var smaster = $("#smaster").val();
+        var smasterid = $("#smasterid").val();
         var sstatement = $("#sstatement").val();
         if (sname != "" && smaster != "") {
             $.ajax({
                 type: "post",
                 url: "ashx/addsection.ashx",
-                data: { "sname": sname, "smaster": smaster ,"sstatement":sstatement},
+                data: { "sname": sname, "smasterid": smasterid, "sstatement": sstatement },
                 datatype: "text",
                 success: function (data) {
                     var json = eval('(' + data + ')');
@@ -25,7 +25,7 @@
     })
     $("#btn_clear").click(function () {
         var sname = $("#sname").val('');
-        var smaster = $("#smaster").val('');
+        var smasterid = $("#smasterid").val('');
         var sstatement = $("#sstatement").val('');
     })
 });
