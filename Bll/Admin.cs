@@ -27,5 +27,9 @@ namespace Bll
         {
             return dal.posting(model);
         }
+        public int reply(BBSReply model)
+        {
+            return dal.reply(model);
+        }
     }
 }

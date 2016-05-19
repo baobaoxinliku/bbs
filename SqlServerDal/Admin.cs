@@ -102,5 +102,10 @@ namespace SqlServerDal
 
             }
         }
+
+        public int reply(Model.BBSReply model)
+        {
+            return 0;
+        }
     }
 }

@@ -175,7 +175,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\footer.css" />
     <Content Include="Content\pagination.css" />
-    <Content Include="Content\ShaBi.css" />
+    <Content Include="Content\reply.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\StyleSheet_index.css" />
     <Content Include="Content\summernote.css" />
@@ -192,6 +192,7 @@
     <Content Include="html\js\addsection.js" />
     <Content Include="html\js\articlelist.js" />
     <Content Include="html\js\posting.js" />
+    <Content Include="html\js\reply.js" />
     <Content Include="html\posting.html" />
     <Content Include="html\images\1.jpg" />
     <Content Include="html\images\10.jpg" />
@@ -251,6 +252,7 @@
     <Content Include="html\ashx\posting.ashx" />
     <Content Include="html\ashx\articlelist.ashx" />
     <Content Include="html\ashx\addsection.ashx" />
+    <Content Include="html\ashx\reply.ashx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="html\js\login.js" />
     <Content Include="html\js\register.js" />
@@ -258,7 +260,7 @@
     <Content Include="html\nav.html" />
     <Content Include="html\register.html" />
     <Content Include="html\articlelist.html" />
-    <Content Include="html\ShaBi.html" />
+    <Content Include="html\reply.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -459,6 +461,9 @@
     </Compile>
     <Compile Include="html\ashx\register.ashx.cs">
       <DependentUpon>register.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="html\ashx\reply.ashx.cs">
+      <DependentUpon>reply.ashx</DependentUpon>
     </Compile>
     <Compile Include="html\BBSSection\ashx\add_section.ashx.cs">
       <DependentUpon>add_section.ashx</DependentUpon>

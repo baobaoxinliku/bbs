@@ -15,5 +15,7 @@ namespace IDal
         int addsection(Model.BBSSection model);
 
         int posting(Model.BBSTopic model);
+
+        int reply(Model.BBSReply model);
     }
 }

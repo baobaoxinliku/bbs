@@ -7,8 +7,8 @@
     <meta charset="utf-8" />
     <link href="../Content/bootstrap.css" rel="stylesheet" type="text/css" />
     <script src="../Scripts/jquery-1.10.2.js" type="text/javascript"></script>
-    <script src="js/register.js" type="text/javascript"></script>
-    <link href="../Content/ShaBi.css" rel="stylesheet">
+    <script src="js/reply.js" type="text/javascript"></script>
+    <link href="../Content/reply.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -18,17 +18,7 @@
 
 </head>
 <body>
-    <iframe src="nav.html" height="50" width="100%" frameborder="0" scrolling="no"></iframe>
-    <!--广告框-->
-
-    <!-- 页头 -->
-    <div class="header">
-        <!--图标-->
-        <div class="he-top3">
-           </a>
-        </div>
-        <!--中部导航条-->
-    
+    <iframe src="nav.html" height="50" width="100%" frameborder="0" scrolling="no"></iframe> 
     <!-- 内容 -->
     <div class="content col-md-12">
         <!--左边内容-->
@@ -48,10 +38,9 @@
             <!--参加评论-->
             <div class="co-middle3">
                 <p class="style-border-left-blue">参加评论</p>
-                <textarea class="form-control" rows="3"></textarea>
+                <input type="text" id="RContents" />
                 <div class="form-group">
-                    <input type="checkbox"> 匿名&nbsp;&nbsp;&nbsp;&nbsp;
-                    <button type="button" class="btn btn-default">发表</button>
+                    <input type="button" id="btn_ok" value="回复" />
                 </div>
             </div>
             <!--网友评论-->
@@ -183,6 +172,8 @@
         </div>
     </div>
     </div>
+    <!-- 底部 -->
+    <iframe src="footer.html" height="50" width="100%" frameborder="0" scrolling="no"></iframe>
 
 </body>
 </html>
