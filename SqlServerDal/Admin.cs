@@ -112,8 +112,8 @@ namespace SqlServerDal
         public DataSet GetListByPage(string strWhere, string orderby, int startIndex, int endIndex)//获取数据列表
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("SELECT * FROM ( ");
-            strSql.Append(" SELECT ROW_NUMBER() OVER (");
+            strSql.Append("select * from ( ");
+            strSql.Append("select row_number() over( ");
             if (!string.IsNullOrEmpty(orderby.Trim()))
             {
                 strSql.Append("order by T." + orderby);

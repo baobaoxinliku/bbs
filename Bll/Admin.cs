@@ -20,7 +20,7 @@ namespace Bll
         {
             return dal.login(model);
         }
-        public int addsetion(BBSSection model)
+        public int addsetion(Model.BBSSection model)
         {
             return dal.addsection(model);
         }

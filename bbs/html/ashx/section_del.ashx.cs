@@ -19,6 +19,7 @@ namespace bbs.html.ashx
             if (action == "Del")//删除操作
             {
                 string DelNumS = context.Request.Form["DelNumS"];//获取批量删除的编号
+                
                 Bll.Admin bll = new Bll.Admin();
                 if (bll.DeleteList(DelNumS))
                 {
