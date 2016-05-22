@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $('#table').bootstrapTable({
-        url: "ashx/list_section.ashx",//数据源
+        url: "ashx/topic_section.ashx",//数据源
         sidePagination: 'server',//设置为服务器端分页
         pagination: true, //是否分页
         search: true, //显示搜索框
@@ -9,23 +9,23 @@
         pageNumber: 1,//显示的页数
         showRefresh: true,//刷新
         striped: true,//条纹
-        sortName: 'SId',
+        sortName: 'TID',
         sortOrder: 'desc',
-        uniqueId: "SId", //每一行的唯一标识，一般为主键列
+        uniqueId: "TID", //每一行的唯一标识，一般为主键列
     });
     //删除按钮
     $("#BtnDel").click(function () {
-        var SId = getCheck();//获取选中行的人的编号
+        var TID = getCheck();//获取选中行的人的编号
         //    alert(DelNumS);
         //判断是否为空 前面是否有多余的 逗号.(如果是全选，前面会多个，)
-        if (SId.charAt(0) == ",") { SId = SId.substring(1); }
-        if (SId == "") { alert("请选择额要删除的数据"); }
+        if (TID.charAt(0) == ",") { TID = TID.substring(1); }
+        if (TID == "") { alert("请选择额要删除的数据"); }
         else
         {
             $.ajax({
                 type: "post",
                 url: "ashx/section_del.ashx",
-                data: { "Action": "Del", "SId": SId },
+                data: { "Action": "Del", "TID": TID },
                 dataType: "text",
                 success: function (data) {
                     var json = eval('(' + data + ')');

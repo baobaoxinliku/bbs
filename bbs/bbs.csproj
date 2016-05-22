@@ -264,6 +264,7 @@
     <Content Include="html\ashx\list2.ashx" />
     <Content Include="html\ashx\section_del.ashx" />
     <Content Include="html\ashx\section_list.ashx" />
+    <Content Include="html\ashx\topic_list.ashx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="html\js\login.js" />
     <Content Include="html\js\register.js" />
@@ -491,6 +492,9 @@
     </Compile>
     <Compile Include="html\ashx\reply.ashx.cs">
       <DependentUpon>reply.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="html\ashx\topic_list.ashx.cs">
+      <DependentUpon>topic_list.ashx</DependentUpon>
     </Compile>
     <Compile Include="html\BBSSection\ashx\add_section.ashx.cs">
       <DependentUpon>add_section.ashx</DependentUpon>
