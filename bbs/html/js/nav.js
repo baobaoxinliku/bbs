@@ -11,12 +11,10 @@
                 $("#exit").hide();
             }
             else {
-
                 $("#name").append('[' + data.info + '] ');
                 $("#reg").hide();
                 $("#login").hide();
             }
         },
-
     });
 });

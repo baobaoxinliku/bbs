@@ -174,7 +174,6 @@
     <Content Include="Content\bootstrap-table.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\footer.css" />
     <Content Include="Content\pagination.css" />
     <Content Include="Content\reply.css" />
     <Content Include="Content\Site.css" />
@@ -257,6 +256,8 @@
     <Content Include="html\ashx\addsection.ashx" />
     <Content Include="html\ashx\reply.ashx" />
     <Content Include="html\ashx\nav.ashx" />
+    <Content Include="html\ashx\list2.ashx" />
+    <Content Include="html\ashx\del.ashx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="html\js\login.js" />
     <Content Include="html\js\register.js" />
@@ -459,6 +460,12 @@
     </Compile>
     <Compile Include="html\ashx\articlelist.ashx.cs">
       <DependentUpon>articlelist.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="html\ashx\del.ashx.cs">
+      <DependentUpon>del.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="html\ashx\list2.ashx.cs">
+      <DependentUpon>list2.ashx</DependentUpon>
     </Compile>
     <Compile Include="html\ashx\login.ashx.cs">
       <DependentUpon>login.ashx</DependentUpon>

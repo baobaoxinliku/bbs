@@ -1,6 +1,4 @@
 ﻿$(document).ready(function () {
-
-
     $('#table').bootstrapTable({
         url: "ashx/list2.ashx",//数据源
         sidePagination: 'server',//设置为服务器端分页
@@ -13,11 +11,7 @@
         striped: true,//条纹
         sortName: 'adminID',
         sortOrder: 'desc',
-
     });
-
-
-
     //删除按钮
     $("#BtnDel").click(function () {
         var DelNumS = getCheck();//获取选中行的人的编号

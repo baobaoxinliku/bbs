@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DALbbs;
 using Model;
+using System.Data;
 
 namespace Bll
 {
@@ -30,6 +31,15 @@ namespace Bll
         public int reply(BBSReply model)
         {
             return dal.reply(model);
+        }
+        public DataSet GetListByPage(string strWhere, string orderby, int startIndex, int endIndex)
+        {
+            return dal.GetListByPage(strWhere, orderby, startIndex, endIndex);
+        }
+        public bool DeleteList(string adminIDlist)
+        {
+            return dal.DeleteList(adminIDlist);
+
         }
     }
 }

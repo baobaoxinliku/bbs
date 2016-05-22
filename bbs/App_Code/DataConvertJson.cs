@@ -5,7 +5,7 @@ using System.Web;
 using System.Text;
 using System.Data;
 using System.Web.Script.Serialization;//添加本引用。
-namespace Web1
+namespace Web
 {
 
     /// <summary>

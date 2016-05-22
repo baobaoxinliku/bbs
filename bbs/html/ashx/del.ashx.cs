@@ -6,21 +6,26 @@ using System.Web;
 namespace bbs.html.ashx
 {
     /// <summary>
-    /// nav 的摘要说明
+    /// del 的摘要说明
     /// </summary>
-    public class nav : IHttpHandler
+    public class del : IHttpHandler
     {
+
         public void ProcessRequest(HttpContext context)
         {
             context.Response.ContentType = "text/plain";
-            string action = context.Request.Form["Action"];
             string json = "{}";
-            if (action == "Load")
+            string action = context.Request.Form["Action"];
+            if (action == "Del")//删除操作
             {
-                if (context.Session["ID"] != null)
+                string DelNumS = context.Request.Form["DelNumS"];//获取批量删除的编号
+                Bll.Admin bll = new Bll.Admin();
+                if (bll.DeleteList(DelNumS))
                 {
-                    json = "{\"info\":\"" + context.Session["Name"] + "\"}";
+                    json = "{'info':'删除成功'}";
                 }
+                else
+                { json = "{'info':'删除失败'}"; }
             }
             context.Response.Write(json);
         }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DBUtility;
+using System.Data;
 
 namespace SqlServerDal
 {
@@ -78,7 +79,7 @@ namespace SqlServerDal
             }
         }
 
-        public int posting(Model.BBSTopic model)
+        public int posting(Model.BBSTopic model)//发帖
         {
             string sql = string.Format(@"insert into [BBSTopic](
             [ttopic],
@@ -103,9 +104,48 @@ namespace SqlServerDal
             }
         }
 
-        public int reply(Model.BBSReply model)
+        public int reply(Model.BBSReply model)//回复
         {
             return 0;
+        }
+
+        public DataSet GetListByPage(string strWhere, string orderby, int startIndex, int endIndex)//获取数据列表
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("SELECT * FROM ( ");
+            strSql.Append(" SELECT ROW_NUMBER() OVER (");
+            if (!string.IsNullOrEmpty(orderby.Trim()))
+            {
+                strSql.Append("order by T." + orderby);
+            }
+            else
+            {
+                strSql.Append("order by T.adminID desc");
+            }
+            strSql.Append(")AS Row, T.*  from Admin T ");
+            if (!string.IsNullOrEmpty(strWhere.Trim()))
+            {
+                strSql.Append(" WHERE " + strWhere);
+            }
+            strSql.Append(" ) TT");
+            strSql.AppendFormat(" WHERE TT.Row between {0} and {1}", startIndex, endIndex);
+            return DbHelperSQL.Query(strSql.ToString());
+        }
+
+        public bool DeleteList(string adminIDlist)//批量删除数据
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("delete from bbs ");
+            strSql.Append("where UID in (" + adminIDlist + ")  ");
+            int rows = DbHelperSQL.ExecuteSql(strSql.ToString());
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
