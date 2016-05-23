@@ -41,5 +41,14 @@ namespace Bll
             return dal.DeleteList(adminIDlist);
 
         }
+
+        public int GetRecordCount(string strWhere)
+        {
+            return dal.GetRecordCount(strWhere);
+        }
+        public DataSet GetList(string strWhere)
+        {
+            return dal.GetList(strWhere);
+        }
     }
 }

@@ -15,13 +15,13 @@ namespace bbs.html.ashx
             context.Response.ContentType = "text/plain";
             string action = context.Request.Form["Action"];
             string json = "{}";
-            if (action == "Load")
-            {
-                if (context.Session["ID"] != null)
-                {
-                    json = "{\"info\":\"" + context.Session["Name"] + "\"}";
-                }
-            }
+            //if (action == "Load")
+            //{
+            //    if (context.Session["ID"] != null)
+            //    {
+            //        json = "{\"info\":\"" + context.Session["Name"] + "\"}";
+            //    }
+            //}
             context.Response.Write(json);
         }
 

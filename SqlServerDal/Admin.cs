@@ -108,21 +108,49 @@ namespace SqlServerDal
         {
             return 0;
         }
-
-        public DataSet GetListByPage(string strWhere, string orderby, int startIndex, int endIndex)//获取数据列表
+        public DataSet GetList(string strWhere)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select * from ( ");
-            strSql.Append("select row_number() over( ");
+            strSql.Append("select SID,SName,SMasterID,SStatement,SClickCount,STopicCount ");
+            strSql.Append(" FROM BBSSection ");
+            if (strWhere.Trim() != "")
+            {
+                strSql.Append(" where " + strWhere);
+            }
+            return DbHelperSQL.Query(strSql.ToString());
+        }
+        public int GetRecordCount(string strWhere)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select count(1) from BBSSection ");
+            if (strWhere.Trim() != "")
+            {
+                strSql.Append("where " + strWhere);
+            }
+            object obj = DbHelperSQL.GetSingle(strSql.ToString());
+            if (obj == null)
+            {
+                return 0;
+            }
+            else
+            {
+                return Convert.ToInt32(obj);
+            }
+        }
+        public DataSet GetListByPage(string strWhere, string orderby, int startIndex, int endIndex)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("SELECT * FROM ( ");
+            strSql.Append(" SELECT ROW_NUMBER() OVER (");
             if (!string.IsNullOrEmpty(orderby.Trim()))
             {
                 strSql.Append("order by T." + orderby);
             }
             else
             {
-                strSql.Append("order by T.adminID desc");
+                strSql.Append("order by T.SID desc");
             }
-            strSql.Append(")AS Row, T.*  from Admin T ");
+            strSql.Append(")AS Row, T.*  from BBSSection T ");
             if (!string.IsNullOrEmpty(strWhere.Trim()))
             {
                 strSql.Append(" WHERE " + strWhere);
@@ -132,11 +160,12 @@ namespace SqlServerDal
             return DbHelperSQL.Query(strSql.ToString());
         }
 
-        public bool DeleteList(string adminIDlist)//批量删除数据
+
+        public bool DeleteList(string SId)//section删除
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("delete from bbs ");
-            strSql.Append("where UID in (" + adminIDlist + ")  ");
+            strSql.Append("delete from BBSSection ");
+            strSql.Append("where SId=" + SId + "");
             int rows = DbHelperSQL.ExecuteSql(strSql.ToString());
             if (rows > 0)
             {

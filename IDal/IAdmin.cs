@@ -22,5 +22,7 @@ namespace IDal
         DataSet GetListByPage(string strWhere, string orderby, int startIndex, int endIndex);
 
         bool DeleteList(string adminIDlist);
+        int GetRecordCount(string strWhere);
+        DataSet GetList(string strWhere);
     }
 }

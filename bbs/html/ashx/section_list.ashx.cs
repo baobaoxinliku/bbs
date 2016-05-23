@@ -15,22 +15,30 @@ namespace bbs.html.ashx
         public void ProcessRequest(HttpContext context)
         {
             context.Response.ContentType = "text/plain";
-            string json = "{}";
+            string json = "";
             string action = context.Request.Form["Action"];
 
-            int displayStart = int.Parse(context.Request["offset"]);
-            int displayLength = int.Parse(context.Request["limit"]);
-
-            BLL.Admin bll = new BLL.Admin();
-            int total = bll.GetRecordCount("");
-            DataSet ds = bll.GetListByPage("", "", displayStart + 1, displayStart + displayLength);
-            ds.Tables[0].TableName = "rows";
-            //返回列表
-            json = Web.DataConvertJson.DataTable2Json(ds.Tables[0]);
-
-            json = "{\"total\":" + total + "," + json.Substring(1);
-
+            if (action == "Show")//显示
+            {
+                Bll.Admin bll = new Bll.Admin();
+                DataSet ds = bll.GetList("");
+                ds.Tables[0].TableName = "Admin";
+                //返回列表
+                json = Web.DataConvertJson.DataTable2Json(ds.Tables[0]);
+            }
+            else if (action == "Del")//删除操作
+            {
+                string DelNumS = context.Request.Form["DelNumS"];//获取批量删除的编号
+                Bll.Admin bll = new Bll.Admin();
+                if (bll.DeleteList(DelNumS))
+                {
+                    json = "{'info':'删除成功'}";
+                }
+                else
+                { json = "{'info':'删除失败'}"; }
+            }
             context.Response.Write(json);
+
         }
 
         public bool IsReusable
