@@ -36,19 +36,50 @@ namespace Bll
         {
             return dal.GetListByPage(strWhere, orderby, startIndex, endIndex);
         }
-        public bool DeleteList(string adminIDlist)
-        {
-            return dal.DeleteList(adminIDlist);
-
-        }
-
+        
         public int GetRecordCount(string strWhere)
         {
             return dal.GetRecordCount(strWhere);
         }
-        public DataSet GetList(string strWhere)
+
+        //Section版块
+        public DataSet SectionGetList(string strWhere)
         {
-            return dal.GetList(strWhere);
+            return dal.SectionGetList(strWhere);
+        }
+        public bool SectionDeleteList(string adminIDlist)
+        {
+            return dal.SectionDeleteList(adminIDlist);
+        }
+
+        //Topic主题
+        public DataSet TopicGetList(string strWhere)
+        {
+            return dal.TopicGetList(strWhere);
+        }
+        public bool TopicDeleteList(string adminIDlist)
+        {
+            return dal.TopicDeleteList(adminIDlist);
+        }
+
+        //Reply回复
+        public DataSet ReplyGetList(string strWhere)
+        {
+            return dal.ReplyGetList(strWhere);
+        }
+        public bool ReplyDeleteList(string adminIDlist)
+        {
+            return dal.ReplyDeleteList(adminIDlist);
+        }
+
+        //Users用户
+        public DataSet UsersGetList(string strWhere)
+        {
+            return dal.UsersGetList(strWhere);
+        }
+        public bool UsersDeleteList(string adminIDlist)
+        {
+            return dal.UsersDeleteList(adminIDlist);
         }
     }
 }

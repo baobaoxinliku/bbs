@@ -108,17 +108,123 @@ namespace SqlServerDal
         {
             return 0;
         }
-        public DataSet GetList(string strWhere)
+
+
+
+        //section版块
+        public DataSet SectionGetList(string strWhere)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select SID,SName,SMasterID,SStatement,SClickCount,STopicCount ");
-            strSql.Append(" FROM BBSSection ");
+            strSql.Append("select SID,SName,SMasterID,SClickCount,STopicCount,SStatement ");
+            strSql.Append("from BBSSection ");
+            if (strWhere.Trim() != "")
+            {
+                strSql.Append("where " + strWhere);
+            }
+            return DbHelperSQL.Query(strSql.ToString());
+        }
+        public bool SectionDeleteList(string SID)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("delete from BBSSection ");
+            strSql.Append("where SID=" + SID + "");
+            int rows = DbHelperSQL.ExecuteSql(strSql.ToString());
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        //Topic主题
+        public DataSet TopicGetList(string strWhere)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select TID,TSID,TUID,TReplycount,TTopic,TContents,TTime,TClickCount,TLastClickT ");
+            strSql.Append("from BBSTopic ");
+            if (strWhere.Trim() != "")
+            {
+                strSql.Append("where " + strWhere);
+            }
+            return DbHelperSQL.Query(strSql.ToString());
+        }
+        public bool TopicDeleteList(string TID)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("delete from BBSTopic ");
+            strSql.Append("where TID=" + TID + "");
+            int rows = DbHelperSQL.ExecuteSql(strSql.ToString());
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        //Reply回复
+        public DataSet ReplyGetList(string strWhere)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select RID,RTID,RSID,RUID,RTopic,RContents,RTime,RClickCount ");
+            strSql.Append("from BBSReply ");
             if (strWhere.Trim() != "")
             {
                 strSql.Append(" where " + strWhere);
             }
             return DbHelperSQL.Query(strSql.ToString());
+
         }
+        public bool ReplyDeleteList(string RID)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("delete from BBSReply ");
+            strSql.Append("where RID=" + RID + "");
+            int rows = DbHelperSQL.ExecuteSql(strSql.ToString());
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        //Users用户
+        public DataSet UserGetList(string strWhere)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select UID,UName,UPassword,UEmail,UBirthday,Usex,UClass,UStatement,URegDate,UState,UPoint ");
+            strSql.Append("from BBSUsers ");
+            if (strWhere.Trim() != "")
+            {
+                strSql.Append(" where " + strWhere);
+            }
+            return DbHelperSQL.Query(strSql.ToString());
+
+        }
+        public bool UserDeleteList(string UID)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("delete from BBSUsers ");
+            strSql.Append("where UID=" + UID + "");
+            int rows = DbHelperSQL.ExecuteSql(strSql.ToString());
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public int GetRecordCount(string strWhere)
         {
             StringBuilder strSql = new StringBuilder();
@@ -161,20 +267,6 @@ namespace SqlServerDal
         }
 
 
-        public bool DeleteList(string SId)//section删除
-        {
-            StringBuilder strSql = new StringBuilder();
-            strSql.Append("delete from BBSSection ");
-            strSql.Append("where SId=" + SId + "");
-            int rows = DbHelperSQL.ExecuteSql(strSql.ToString());
-            if (rows > 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+        
     }
 }

@@ -59,13 +59,6 @@ namespace DALbbs
             object objType = CreateObject(AssemblyPath, ClassNamespace);
             return (IDal.IAdmin)objType;
         }
-        public static IDal.IBBSSection CreateAdminsection()
-        {
-
-            string ClassNamespace = AssemblyPath + ".Admin";
-            object objType = CreateObject(AssemblyPath, ClassNamespace);
-            return (IDal.IBBSSection)objType;
-        }
 
         ///// <summary>
         ///// 创建Class数据层接口。

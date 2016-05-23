@@ -21,8 +21,22 @@ namespace IDal
 
         DataSet GetListByPage(string strWhere, string orderby, int startIndex, int endIndex);
 
-        bool DeleteList(string adminIDlist);
         int GetRecordCount(string strWhere);
-        DataSet GetList(string strWhere);
+
+        //section版块
+        DataSet SectionGetList(string strWhere);
+        bool SectionDeleteList(string adminIDlist);
+
+        //Topic主题
+        DataSet TopicGetList(string strWhere);
+        bool TopicDeleteList(string adminIDlist);
+
+        //Reply回复
+        DataSet ReplyGetList(string strWhere);
+        bool ReplyDeleteList(string adminIDlist);
+
+        //Users用户
+        DataSet UsersGetList(string strWhere);
+        bool UsersDeleteList(string adminIDlist);
     }
 }

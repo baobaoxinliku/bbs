@@ -21,7 +21,7 @@ namespace bbs.html.ashx
             if (action == "Show")//显示
             {
                 Bll.Admin bll = new Bll.Admin();
-                DataSet ds = bll.GetList("");
+                DataSet ds = bll.SectionGetList("");
                 ds.Tables[0].TableName = "Admin";
                 //返回列表
                 json = Web.DataConvertJson.DataTable2Json(ds.Tables[0]);
@@ -30,7 +30,7 @@ namespace bbs.html.ashx
             {
                 string DelNumS = context.Request.Form["DelNumS"];//获取批量删除的编号
                 Bll.Admin bll = new Bll.Admin();
-                if (bll.DeleteList(DelNumS))
+                if (bll.SectionDeleteList(DelNumS))
                 {
                     json = "{'info':'删除成功'}";
                 }
@@ -38,7 +38,6 @@ namespace bbs.html.ashx
                 { json = "{'info':'删除失败'}"; }
             }
             context.Response.Write(json);
-
         }
 
         public bool IsReusable

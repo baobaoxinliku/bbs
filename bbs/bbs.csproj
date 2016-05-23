@@ -184,13 +184,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
-    <Content Include="html\addsection.html" />
     <Content Include="html\ashx\register.ashx" />
     <Content Include="html\BBSSection\add_section.html" />
     <Content Include="html\BBSSection\js\add_section.js" />
     <Content Include="html\footer.html" />
-    <Content Include="html\js\addsection.js" />
-    <Content Include="html\js\articlelist.js" />
     <Content Include="html\js\reply_list.js" />
     <Content Include="html\js\section_list.js" />
     <Content Include="html\js\nav.js" />
@@ -257,21 +254,19 @@
     <Content Include="html\ashx\login.ashx" />
     <Content Include="html\BBSSection\ashx\add_section.ashx" />
     <Content Include="html\ashx\posting.ashx" />
-    <Content Include="html\ashx\articlelist.ashx" />
-    <Content Include="html\ashx\addsection.ashx" />
     <Content Include="html\ashx\reply.ashx" />
     <Content Include="html\ashx\nav.ashx" />
-    <Content Include="html\ashx\list2.ashx" />
-    <Content Include="html\ashx\section_del.ashx" />
     <Content Include="html\ashx\section_list.ashx" />
     <Content Include="html\ashx\topic_list.ashx" />
+    <Content Include="html\ashx\users_list.ashx" />
+    <Content Include="html\ashx\reply_list.ashx" />
+    <Content Include="html\ashx\modify.ashx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="html\js\login.js" />
     <Content Include="html\js\register.js" />
     <Content Include="html\login.html" />
     <Content Include="html\nav.html" />
     <Content Include="html\register.html" />
-    <Content Include="html\articlelist.html" />
     <Content Include="html\reply.html" />
     <Content Include="html\topic_list.html" />
     <Content Include="html\users_list.html" />
@@ -463,17 +458,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="App_Code\MessageBox.cs" />
-    <Compile Include="html\ashx\addsection.ashx.cs">
-      <DependentUpon>addsection.ashx</DependentUpon>
+    <Compile Include="html\ashx\modify.ashx.cs">
+      <DependentUpon>modify.ashx</DependentUpon>
     </Compile>
-    <Compile Include="html\ashx\articlelist.ashx.cs">
-      <DependentUpon>articlelist.ashx</DependentUpon>
-    </Compile>
-    <Compile Include="html\ashx\section_del.ashx.cs">
-      <DependentUpon>section_del.ashx</DependentUpon>
-    </Compile>
-    <Compile Include="html\ashx\list2.ashx.cs">
-      <DependentUpon>list2.ashx</DependentUpon>
+    <Compile Include="html\ashx\reply_list.ashx.cs">
+      <DependentUpon>reply_list.ashx</DependentUpon>
     </Compile>
     <Compile Include="html\ashx\section_list.ashx.cs">
       <DependentUpon>section_list.ashx</DependentUpon>
@@ -495,6 +484,9 @@
     </Compile>
     <Compile Include="html\ashx\topic_list.ashx.cs">
       <DependentUpon>topic_list.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="html\ashx\users_list.ashx.cs">
+      <DependentUpon>users_list.ashx</DependentUpon>
     </Compile>
     <Compile Include="html\BBSSection\ashx\add_section.ashx.cs">
       <DependentUpon>add_section.ashx</DependentUpon>

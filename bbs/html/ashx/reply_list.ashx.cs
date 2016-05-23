@@ -7,9 +7,9 @@ using System.Web;
 namespace bbs.html.ashx
 {
     /// <summary>
-    /// topic_list 的摘要说明
+    /// reply_list 的摘要说明
     /// </summary>
-    public class topic_list : IHttpHandler
+    public class reply_list : IHttpHandler
     {
 
         public void ProcessRequest(HttpContext context)
@@ -21,7 +21,7 @@ namespace bbs.html.ashx
             if (action == "Show")//显示
             {
                 Bll.Admin bll = new Bll.Admin();
-                DataSet ds = bll.TopicGetList("");
+                DataSet ds = bll.ReplyGetList("");
                 ds.Tables[0].TableName = "Admin";
                 //返回列表
                 json = Web.DataConvertJson.DataTable2Json(ds.Tables[0]);
@@ -30,7 +30,7 @@ namespace bbs.html.ashx
             {
                 string DelNumS = context.Request.Form["DelNumS"];//获取批量删除的编号
                 Bll.Admin bll = new Bll.Admin();
-                if (bll.TopicDeleteList(DelNumS))
+                if (bll.ReplyDeleteList(DelNumS))
                 {
                     json = "{'info':'删除成功'}";
                 }
