@@ -192,6 +192,15 @@
     <Content Include="html\BBSSection\add_section.html" />
     <Content Include="html\BBSSection\js\add_section.js" />
     <Content Include="html\footer.html" />
+    <Content Include="html\images\n1.jpg" />
+    <Content Include="html\images\n2.jpg" />
+    <Content Include="html\images\n3.jpg" />
+    <Content Include="html\images\n4.jpg" />
+    <Content Include="html\images\n5.jpg" />
+    <Content Include="html\images\n6.jpg" />
+    <Content Include="html\images\n7.jpg" />
+    <Content Include="html\images\t2.jpg" />
+    <Content Include="html\images\t3.jpg" />
     <Content Include="html\js\reply_list.js" />
     <Content Include="html\js\section_add.js" />
     <Content Include="html\js\nav.js" />
@@ -201,6 +210,7 @@
     <Content Include="html\js\topic_list.js" />
     <Content Include="html\js\users_list.js" />
     <Content Include="html\nav.html" />
+    <Content Include="html\topic_show.html" />
     <Content Include="html\reply_list.html" />
     <Content Include="html\posting.html" />
     <Content Include="html\images\10.jpg" />

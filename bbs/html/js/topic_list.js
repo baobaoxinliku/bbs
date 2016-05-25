@@ -73,7 +73,7 @@
 
 function editFormatter(value, row, index) { //处理操作
 
-    var str = '<a href="aspx/Modify.aspx?id=' + value + '">编辑</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="show.html?UserID=' + value + '">详情</a>'
+    var str = '<a href="topic_show.html?UserID=' + value + '">详情</a>'
     value = str;
     return value;
 }
