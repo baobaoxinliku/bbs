@@ -37,6 +37,17 @@ namespace bbs.html.ashx
                 else
                 { json = "{'info':'删除失败'}"; }
             }
+            //else if (action == "Update")
+            //{
+            //    string UpdateNums = context.Request.Form["UpdateNums"];
+            //    Bll.Admin bll = new Bll.Admin();
+            //    if (bll.Update(UpdateNums))
+            //    {
+            //        json = "{'info':'修改成功'}";
+            //    }
+            //    else
+            //    { json = "{'info':'修改失败'}"; }
+            //}
             context.Response.Write(json);
         }
 

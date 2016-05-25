@@ -56,7 +56,7 @@
         else {
             $.ajax({
                 type: "post",
-                url: "ashx/section_list.ashx",
+                url: "aspx/section_update.aspx",
                 data: { "Action": "Update", "UpdateNums": UpdateNums },
                 dataType: "text",
                 success: function (data) {

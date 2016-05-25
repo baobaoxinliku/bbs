@@ -58,27 +58,6 @@ namespace SqlServerDal
             }
         }
 
-        public int addsection(Model.BBSSection model1)//新增板块
-        {
-            string sql = string.Format(@"insert into [BBSSection](
-            [sname],
-            [smasterid],
-            [sstatement],
-            [sclickcount],
-            [stopiccount])
-            values('{0}',{1},'{2}',{3},{4});select @@identity",
-            model1.SName, model1.SMasterID, model1.SStatement, model1.SClickCount, model1.STopicCount);
-            object obj = DbHelperSQL.GetSingle(sql);
-            if (obj == null)
-            {
-                return 0;
-            }
-            else
-            {
-                return Convert.ToInt32(obj);
-            }
-        }
-
         public int posting(Model.BBSTopic model)//发帖
         {
             string sql = string.Format(@"insert into [BBSTopic](
