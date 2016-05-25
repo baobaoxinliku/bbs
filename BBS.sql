@@ -19,6 +19,13 @@ ALTER TABLE [BBSReply] WITH NOCHECK ADD  CONSTRAINT [PK_BBSReply] PRIMARY KEY  N
 SET IDENTITY_INSERT [BBSReply] ON
 INSERT [BBSReply] ([RTID],[RSID],[RUID],[RTopic],[RContents],[RTime],[RClickCount]) VALUES ( 1,1,1,N'无聊啊',N'说废话的地方',N'2011/6/24 0:00:00',5)
 INSERT [BBSReply] ([RTID],[RSID],[RUID],[RTopic],[RContents],[RTime],[RClickCount]) VALUES ( 1,1,1,N'啊啊啊',N'说废话的地方',N'2011/6/24 0:00:00',5)
+INSERT [BBSReply] ([RTID],[RSID],[RUID],[RTopic],[RContents],[RTime],[RClickCount]) VALUES ( 1,1,1,N'啊啊啊',N'说废话的地方',N'2011/6/24 0:00:00',5)
+INSERT [BBSReply] ([RTID],[RSID],[RUID],[RTopic],[RContents],[RTime],[RClickCount]) VALUES ( 1,1,1,N'啊啊啊',N'说废话的地方',N'2011/6/24 0:00:00',5)
+INSERT [BBSReply] ([RTID],[RSID],[RUID],[RTopic],[RContents],[RTime],[RClickCount]) VALUES ( 1,1,1,N'啊啊啊',N'说废话的地方',N'2011/6/24 0:00:00',5)
+INSERT [BBSReply] ([RTID],[RSID],[RUID],[RTopic],[RContents],[RTime],[RClickCount]) VALUES ( 1,1,1,N'啊啊啊',N'说废话的地方',N'2011/6/24 0:00:00',5)
+INSERT [BBSReply] ([RTID],[RSID],[RUID],[RTopic],[RContents],[RTime],[RClickCount]) VALUES ( 1,1,1,N'啊啊啊',N'说废话的地方',N'2011/6/24 0:00:00',5)
+INSERT [BBSReply] ([RTID],[RSID],[RUID],[RTopic],[RContents],[RTime],[RClickCount]) VALUES ( 1,1,1,N'啊啊啊',N'说废话的地方',N'2011/6/24 0:00:00',5)
+INSERT [BBSReply] ([RTID],[RSID],[RUID],[RTopic],[RContents],[RTime],[RClickCount]) VALUES ( 1,1,1,N'啊啊啊',N'说废话的地方',N'2011/6/24 0:00:00',5)
 
 SET IDENTITY_INSERT [BBSReply] OFF
 if exists (select * from sysobjects where id = OBJECT_ID('[BBSSection]') and OBJECTPROPERTY(id, 'IsUserTable') = 1) 
@@ -36,6 +43,11 @@ ALTER TABLE [BBSSection] WITH NOCHECK ADD  CONSTRAINT [PK_BBSSection] PRIMARY KE
 SET IDENTITY_INSERT [BBSSection] ON
 
 INSERT [BBSSection] ([SID],[SName],[SMasterID],[SStatement],[SClickCount],[STopicCount]) VALUES ( 1,N'灌水堂',1,N'说废话的地方',5,5)
+INSERT [BBSSection] ([SID],[SName],[SMasterID],[SStatement],[SClickCount],[STopicCount]) VALUES ( 2,N'游戏厅',1,N'说游戏的地方',4,5)
+INSERT [BBSSection] ([SID],[SName],[SMasterID],[SStatement],[SClickCount],[STopicCount]) VALUES ( 2,N'游戏厅',1,N'说游戏的地方',4,5)
+INSERT [BBSSection] ([SID],[SName],[SMasterID],[SStatement],[SClickCount],[STopicCount]) VALUES ( 2,N'游戏厅',1,N'说游戏的地方',4,5)
+INSERT [BBSSection] ([SID],[SName],[SMasterID],[SStatement],[SClickCount],[STopicCount]) VALUES ( 2,N'游戏厅',1,N'说游戏的地方',4,5)
+INSERT [BBSSection] ([SID],[SName],[SMasterID],[SStatement],[SClickCount],[STopicCount]) VALUES ( 2,N'游戏厅',1,N'说游戏的地方',4,5)
 INSERT [BBSSection] ([SID],[SName],[SMasterID],[SStatement],[SClickCount],[STopicCount]) VALUES ( 2,N'游戏厅',1,N'说游戏的地方',4,5)
 
 SET IDENTITY_INSERT [BBSSection] OFF
