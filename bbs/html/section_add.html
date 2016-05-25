@@ -14,11 +14,16 @@
 <body>
     <!-- 导航条 -->
     <iframe src="nav.html" width="100%" frameborder="0" scrolling="no"></iframe>
-    <table>
+    <table align="center">
         <tr><td>版块名称：</td><td><input type="text" id="SName"/></td></tr>
         <tr><td>版主编号</td><td><input type="text" id="SMasterID" /></td></tr>
         <tr><td>版块说明：</td><td><input type="text" id="SStatement" /></td></tr>
-        <tr><td colspan="2"><input type="button" id="btn_add" /><input type="button" id="btn_clear" /></td></tr>
+        <tr>
+            <td colspan="2">
+                <input type="button" id="btn_add" value="新增"/>
+                <input type="button" id="btn_clear" value="重置"/>
+            </td>
+        </tr>
     </table>
     <!-- 底部 -->
     <iframe src="footer.html" width="100%" frameborder="0" scrolling="no"></iframe>

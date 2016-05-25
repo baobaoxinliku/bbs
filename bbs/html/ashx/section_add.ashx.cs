@@ -15,38 +15,25 @@ namespace bbs.html.ashx
         {
             context.Response.ContentType = "text/plain";
 
-            string json = "{'info':'增加数据失败'}";
+            string json = "{'info':'增加版块失败'}";
             //获取GET方法传递参数：Request.QueryString["参数名称"];
             //获取POST方法传递参数：Request.Form["参数名称"];
-            string uname = context.Request.Form["uname"];
+            string SName = context.Request.Form["SName"];
+            string SMasterID = context.Request.Form["SMasterID"];
+            string SStatement = context.Request.Form["SStatement"];
 
+            Model.BBSSection model = new Model.BBSSection();
+            model.SName = SName;
+            model.SMasterID = int.Parse(SMasterID);
+            model.SStatement = SStatement;
+            model.SClickCount = 0;
+            model.STopicCount = 0;
 
-            string upassword = context.Request.Form["upassword"];
-            string uemail = context.Request.Form["uemail"];
-            string ubirthday = context.Request.Form["ubirthday"];
-            string usex = context.Request.Form["usex"];
-            string ustatement = context.Request.Form["ustatement"];
-
-            Model.BBSUsers model1 = new Model.BBSUsers();
-            model1.UName = uname;
-            model1.UPassword = upassword;
-            model1.UEmail = uemail;
-            model1.UBirthday = DateTime.Parse(ubirthday);
-            model1.USex = false;
-
-            //初始值为0
-            model1.UClass = 0;
-            model1.UPoint = 0;
-            model1.URegDate = DateTime.Now;
-
-            if (usex == "true")
-            { model1.USex = true; }
-            model1.UStatement = ustatement;
             Bll.Admin bll = new Bll.Admin();
-            int n = bll.register(model1);
+            int n = bll.Add(model);
             if (n > 0)
             {
-                json = "{'info':'增加数据成功，编号是：" + n + "'}";
+                json = "{'info':'增加版块成功，编号是：" + n + "'}";
             }
             context.Response.Write(json);
         }
