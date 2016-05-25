@@ -82,7 +82,7 @@ function SEXFormatter(value, row, index) { //处理性别的显示
 }
 function editFormatter(value, row, index) { //处理操作
 
-    var str = '<a href="modify.aspx?id=' + value + '">编辑</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="show.html?UserID=' + value + '">详情</a>'
+    var str = '<a href="show.html?UserID=' + value + '">详情</a>'
     value = str;
     return value;
 }
