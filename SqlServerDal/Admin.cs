@@ -197,7 +197,7 @@ namespace SqlServerDal
         }
 
         //Users用户
-        public DataSet UserGetList(string strWhere)
+        public DataSet UsersGetList(string strWhere)
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("select UID,UName,UPassword,UEmail,UBirthday,Usex,UClass,UStatement,URegDate,UState,UPoint ");
@@ -209,7 +209,7 @@ namespace SqlServerDal
             return DbHelperSQL.Query(strSql.ToString());
 
         }
-        public bool UserDeleteList(string UID)
+        public bool UsersDeleteList(string UID)
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("delete from BBSUsers ");
