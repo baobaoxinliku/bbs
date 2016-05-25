@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -53,6 +54,9 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -197,7 +201,6 @@
     <Content Include="html\js\topic_list.js" />
     <Content Include="html\js\users_list.js" />
     <Content Include="html\reply_list.html" />
-    <Content Include="html\section_list.html" />
     <Content Include="html\posting.html" />
     <Content Include="html\images\1.jpg" />
     <Content Include="html\images\10.jpg" />
@@ -269,6 +272,7 @@
     <Content Include="html\nav.html" />
     <Content Include="html\register.html" />
     <Content Include="html\reply.html" />
+    <Content Include="html\section_list.html" />
     <Content Include="html\section_add.html" />
     <Content Include="html\topic_list.html" />
     <Content Include="html\users_list.html" />
