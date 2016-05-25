@@ -140,42 +140,15 @@ namespace SqlServerDal
         }
         public int Add(Model.BBSSection model)
         {
-            StringBuilder strSql = new StringBuilder();
-            StringBuilder strSql1 = new StringBuilder();
-            StringBuilder strSql2 = new StringBuilder();
-            if (model.SName != null)
-            {
-                strSql1.Append("SName,");
-                strSql2.Append("'" + model.SName + "',");
-            }
-            if (model.SMasterID.ToString() != null)
-            {
-                strSql1.Append("SMasterID,");
-                strSql2.Append("" + model.SMasterID + ",");
-            }
-            if (model.SStatement != null)
-            {
-                strSql1.Append("SStatement,");
-                strSql2.Append("'" + model.SStatement + "',");
-            }
-            if (model.SClickCount.ToString() != null)
-            {
-                strSql1.Append("SClickCount,");
-                strSql2.Append("" + model.SClickCount + ",");
-            }
-            if (model.STopicCount.ToString() != null)
-            {
-                strSql1.Append("STopicCount,");
-                strSql2.Append("" + model.STopicCount + ",");
-            }
-            strSql.Append("insert into BBSSection(");
-            strSql.Append(strSql1.ToString().Remove(strSql1.Length - 1));
-            strSql.Append(")");
-            strSql.Append(" values (");
-            strSql.Append(strSql2.ToString().Remove(strSql2.Length - 1));
-            strSql.Append(")");
-            strSql.Append(";select @@IDENTITY");
-            object obj = DbHelperSQL.GetSingle(strSql.ToString());
+            string sql = string.Format(@"insert into [BBSSection](
+            [sname],
+            [smasterid],
+            [sstatement],
+            [sclickcount],
+            [stopiccount])
+            values('{0}',{1},'{2}',{3},{4});select @@identity",
+            model.SName, model.SMasterID, model.SStatement, model.SClickCount, model.STopicCount);
+            object obj = DbHelperSQL.GetSingle(sql);
             if (obj == null)
             {
                 return 0;

@@ -49,6 +49,26 @@
             });
         }
     });
+
+    $("#BtnUpdate").click(function () {
+        var UpdateNums = getCheck();
+        if (UpdateNums == "") { alert("请选择要修改的数据"); }
+        if (DelNumS.charAt(0) == ",") { alert("只能选择一个数据修改"); }
+        else {
+            $.ajax({
+                type: "post",
+                url: "ashx/users_list.ashx",
+                data: { "Action": "Update", "UpdateNums": UpdateNums },
+                dataType: "text",
+                success: function (data) {
+                    var json = eval('(' + data + ')');
+                    alert(json.info);
+                    //刷新页面
+                    window.location.reload();
+                }
+            });
+        }
+    });
 });
 
 function SEXFormatter(value, row, index) { //处理性别的显示

@@ -13,8 +13,6 @@ namespace IDal
 
         int login(Model.BBSUsers model);
 
-        int addsection(Model.BBSSection model);
-
         int posting(Model.BBSTopic model);
 
         int reply(Model.BBSReply model);
