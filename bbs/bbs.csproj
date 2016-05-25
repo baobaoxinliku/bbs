@@ -189,6 +189,7 @@
     <Content Include="html\BBSSection\js\add_section.js" />
     <Content Include="html\footer.html" />
     <Content Include="html\js\reply_list.js" />
+    <Content Include="html\js\section_add.js" />
     <Content Include="html\js\section_list.js" />
     <Content Include="html\js\nav.js" />
     <Content Include="html\js\posting.js" />
@@ -260,7 +261,7 @@
     <Content Include="html\ashx\topic_list.ashx" />
     <Content Include="html\ashx\users_list.ashx" />
     <Content Include="html\ashx\reply_list.ashx" />
-    <Content Include="html\ashx\modify.ashx" />
+    <Content Include="html\ashx\section_add.ashx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="html\js\login.js" />
     <Content Include="html\js\register.js" />
@@ -268,6 +269,7 @@
     <Content Include="html\nav.html" />
     <Content Include="html\register.html" />
     <Content Include="html\reply.html" />
+    <Content Include="html\section_add.html" />
     <Content Include="html\topic_list.html" />
     <Content Include="html\users_list.html" />
     <Content Include="Scripts\bootstrap-table-zh-CN.min.js" />
@@ -458,11 +460,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="App_Code\MessageBox.cs" />
-    <Compile Include="html\ashx\modify.ashx.cs">
-      <DependentUpon>modify.ashx</DependentUpon>
-    </Compile>
     <Compile Include="html\ashx\reply_list.ashx.cs">
       <DependentUpon>reply_list.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="html\ashx\section_add.ashx.cs">
+      <DependentUpon>section_add.ashx</DependentUpon>
     </Compile>
     <Compile Include="html\ashx\section_list.ashx.cs">
       <DependentUpon>section_list.ashx</DependentUpon>
