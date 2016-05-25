@@ -51,6 +51,11 @@ namespace Bll
         {
             return dal.SectionDeleteList(adminIDlist);
         }
+        public int Add(Model.BBSSection model)
+        {
+            return dal.Add(model);
+        }
+
 
         //Topic主题
         public DataSet TopicGetList(string strWhere)
@@ -60,6 +65,10 @@ namespace Bll
         public bool TopicDeleteList(string adminIDlist)
         {
             return dal.TopicDeleteList(adminIDlist);
+        }
+        public int Add(Model.BBSTopic model)
+        {
+            return dal.Add(model);
         }
 
         //Reply回复
@@ -71,6 +80,10 @@ namespace Bll
         {
             return dal.ReplyDeleteList(adminIDlist);
         }
+        public int Add(Model.BBSReply model)
+        {
+            return dal.Add(model);
+        }
 
         //Users用户
         public DataSet UsersGetList(string strWhere)
@@ -80,6 +93,10 @@ namespace Bll
         public bool UsersDeleteList(string adminIDlist)
         {
             return dal.UsersDeleteList(adminIDlist);
+        }
+        public int Add(Model.BBSUsers model)
+        {
+            return dal.Add(model);
         }
     }
 }
