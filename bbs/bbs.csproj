@@ -194,10 +194,10 @@
     <Content Include="html\footer.html" />
     <Content Include="html\js\reply_list.js" />
     <Content Include="html\js\section_add.js" />
-    <Content Include="html\js\section_list.js" />
     <Content Include="html\js\nav.js" />
     <Content Include="html\js\posting.js" />
     <Content Include="html\js\reply.js" />
+    <Content Include="html\js\section_list.js" />
     <Content Include="html\js\topic_list.js" />
     <Content Include="html\js\users_list.js" />
     <Content Include="html\reply_list.html" />

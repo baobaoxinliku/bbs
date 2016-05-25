@@ -27,7 +27,7 @@ namespace bbs.html.BBSSection.ashx
             model.STopicCount = 0;
 
             Bll.Admin bll = new Bll.Admin();
-            int n = bll.addsetion(model);
+            int n = bll.Add(model);
             if (n > 0)
             {
                 json = "{'info':'增加数据成功，板块编号是：" + n + "'}";

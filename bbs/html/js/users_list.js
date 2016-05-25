@@ -32,7 +32,7 @@
         //判断是否为空。。前面是否有多余的 逗号.(如果是全选，前面会多个，)
         if (DelNumS.charAt(0) == ",") { DelNumS = DelNumS.substring(1); }
 
-        if (DelNumS == "") { alert("请选择额要删除的数据"); }
+        if (DelNumS == "") { alert("请选择要删除的数据"); }
         else
         {
             $.ajax({

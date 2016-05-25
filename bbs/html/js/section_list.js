@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     $.ajax({
         type: "Post",
-        url: "ashx/topic_list.ashx",
+        url: "ashx/section_list.ashx",
         //方法传参的写法一定要对，str为形参的名字,str2为第二个形参的名字   
         data: { "Action": "Show" },
         dataType: "json",
@@ -33,11 +33,10 @@
         if (DelNumS.charAt(0) == ",") { DelNumS = DelNumS.substring(1); }
 
         if (DelNumS == "") { alert("请选择要删除的数据"); }
-        else
-        {
+        else{
             $.ajax({
                 type: "post",
-                url: "ashx/topic_list.ashx",
+                url: "ashx/section_list.ashx",
                 data: { "Action": "Del", "DelNums": DelNumS },
                 dataType: "text",
                 success: function (data) {
@@ -46,7 +45,7 @@
                     //刷新页面
                     window.location.reload();
                 }
-            });
+            }); 
         }
     });
 
@@ -57,7 +56,7 @@
         else {
             $.ajax({
                 type: "post",
-                url: "ashx/topic_list.ashx",
+                url: "ashx/section_list.ashx",
                 data: { "Action": "Update", "UpdateNums": UpdateNums },
                 dataType: "text",
                 success: function (data) {

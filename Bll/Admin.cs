@@ -20,10 +20,6 @@ namespace Bll
         {
             return dal.login(model);
         }
-        public int addsetion(Model.BBSSection model)
-        {
-            return dal.addsection(model);
-        }
         public int posting(BBSTopic model)
         {
             return dal.posting(model);

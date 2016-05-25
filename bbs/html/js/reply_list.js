@@ -1,7 +1,7 @@
 ﻿$(document).ready(function () {
     $.ajax({
         type: "Post",
-        url: "ashx/topic_list.ashx",
+        url: "ashx/reply_list.ashx",
         //方法传参的写法一定要对，str为形参的名字,str2为第二个形参的名字   
         data: { "Action": "Show" },
         dataType: "json",
@@ -37,7 +37,7 @@
         {
             $.ajax({
                 type: "post",
-                url: "ashx/topic_list.ashx",
+                url: "ashx/reply_list.ashx",
                 data: { "Action": "Del", "DelNums": DelNumS },
                 dataType: "text",
                 success: function (data) {
@@ -57,7 +57,7 @@
         else {
             $.ajax({
                 type: "post",
-                url: "ashx/topic_list.ashx",
+                url: "ashx/reply_list.ashx",
                 data: { "Action": "Update", "UpdateNums": UpdateNums },
                 dataType: "text",
                 success: function (data) {
