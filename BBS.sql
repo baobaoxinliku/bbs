@@ -1,3 +1,7 @@
+create database bbs
+
+use bbs
+
 if exists (select * from sysobjects where id = OBJECT_ID('[BBSReply]') and OBJECTPROPERTY(id, 'IsUserTable') = 1) 
 DROP TABLE [BBSReply]
 
@@ -13,7 +17,8 @@ CREATE TABLE [BBSReply] (
 
 ALTER TABLE [BBSReply] WITH NOCHECK ADD  CONSTRAINT [PK_BBSReply] PRIMARY KEY  NONCLUSTERED ( [RID] )
 SET IDENTITY_INSERT [BBSReply] ON
-
+INSERT [BBSReply] ([RTID],[RSID],[RUID],[RTopic],[RContents],[RTime],[RClickCount]) VALUES ( 1,1,1,N'无聊啊',N'说废话的地方',N'2011/6/24 0:00:00',5)
+INSERT [BBSReply] ([RTID],[RSID],[RUID],[RTopic],[RContents],[RTime],[RClickCount]) VALUES ( 1,1,1,N'啊啊啊',N'说废话的地方',N'2011/6/24 0:00:00',5)
 
 SET IDENTITY_INSERT [BBSReply] OFF
 if exists (select * from sysobjects where id = OBJECT_ID('[BBSSection]') and OBJECTPROPERTY(id, 'IsUserTable') = 1) 
