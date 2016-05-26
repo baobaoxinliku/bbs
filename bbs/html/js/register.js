@@ -43,15 +43,4 @@
         $("#ubirthday").val('');
         $("#ustatement").val('');
     });
-
-    //$.ajax({
-    //    type: "post",
-    //    url: "register.ashx",
-    //    data: { "action": "show" },
-    //    datatype: "text",
-    //    success: function (data) {
-    //        var json = eval('(' + data + ')');
-    //        alert(json.Age);
-    //    }
-    //});
 });

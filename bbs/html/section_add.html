@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>新增</title>
+    <title>新增版块</title>
 	<meta charset="utf-8" />
     <link rel="stylesheet" href="../Content/bootstrap.min.css">
     <link rel="stylesheet" href="../Content/bootstrap-table.css">
@@ -10,21 +10,45 @@
     <script src="../Scripts/bootstrap.min.js"></script>
 
     <script src="js/section_add.js"></script>
+    <style type="text/css">
+        .container {
+            height: 300px;
+        }
+    </style>
 </head>
 <body>
     <!-- 导航条 -->
     <iframe src="nav.html" width="100%" frameborder="0" scrolling="no"></iframe>
-    <table align="center">
-        <tr><td>版块名称：</td><td><input type="text" id="SName"/></td></tr>
-        <tr><td>版主编号</td><td><input type="text" id="SMasterID" /></td></tr>
-        <tr><td>版块说明：</td><td><input type="text" id="SStatement" /></td></tr>
-        <tr>
-            <td colspan="2">
-                <button id="btn_add" type="button" class="btn btn-default">新增</button>
-                <button id="btn_clear" type="button" class="btn btn-default">重置</button>
-            </td>
-        </tr>
-    </table>
+    
+
+    <div class="container">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">版块名称：</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="SName" placeholder="SName">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">版主编号：</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="SMasterID" placeholder="SMasterID">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">版块说明：</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="SStatement" placeholder="SStatement">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <input type="button" id="btn_add" value="新增" class="btn btn-default" />
+                    <input type="button" id="btn_clear" value="重置" class="btn btn-default" />
+                </div>
+            </div>
+        </form>
+    </div>
     <!-- 底部 -->
     <iframe src="footer.html" width="100%" frameborder="0" scrolling="no"></iframe>
 </body>
