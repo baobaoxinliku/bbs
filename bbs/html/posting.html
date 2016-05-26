@@ -16,23 +16,40 @@
     <link href="../Content/summernote.css" rel="stylesheet">
     <script src="../Scripts/summernote.min.js"></script>
     <script src="js/posting.js"></script>
+    <style type="text/css">
+        .form-group {
+            padding:10px 0px 30px 0px;
+        }
+        .container {
+            height:550px;
+        }
+    </style>
 </head>
 <body>
     <!-- 导航条 -->
     <iframe src="nav.html" width="100%" frameborder="0" scrolling="no"></iframe>
     <div class="container">
-        <p>主贴标题：<input type="text" id="ttopic" /></p>
-        <p>
-            主题分类：
-            <select id="Select1">
-                <option>灌水堂</option>
-                <option>游戏厅</option>
-            </select>
-        </p>
+        <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">主贴标题：</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="ttopic" placeholder="ttopic">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">主题分类：</label>
+            <div class="col-sm-10">
+                <select class="form-control">
+                    <option>灌水堂</option>
+                    <option>游戏厅</option>
+                    <option>耽美区</option>
+                    <option>小说区</option>
+                </select>
+            </div>
+        </div>
         <div id="summernote"></div>
         <p>
-            <input type="button" id="btn_ok" value="提交" />
-            <input type="button" id="btn_clear" value="清空" />
+            <input type="button" id="btn_ok" value="提交" class="btn btn-default" />
+            <input type="button" id="btn_clear" value="清空" class="btn btn-default"/>
         </p>
     </div>
     <script>

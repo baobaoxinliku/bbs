@@ -10,7 +10,7 @@
                 success: function (data) {
                     var json = eval('(' + data + ')');
                     alert(json.info);
-                    //window.location.href = "\index.html";
+                    //window.location.href = "\reply_list.html";
                 },
                 error: function (err) {
                     alert(err);

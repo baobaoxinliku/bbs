@@ -85,7 +85,27 @@ namespace SqlServerDal
 
         public int reply(Model.BBSReply model)//回复
         {
-            return 0;
+            string sql = string.Format(@"insert into [BBSReply](
+            [RID],
+            [RTID],
+            [RSID],
+            [RUID],
+            [RTopi],
+            [RContents],
+            [RTime],
+            [RClickCount])
+            values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}');select @@identity",
+              model.RID, model.RTID, model.RSID, model.RUID, model.RTopic, model.RContents, model.RTime, model.RClickCount);
+            object obj = DbHelperSQL.GetSingle(sql);
+            if (obj == null)
+            {
+                return 0;
+            }
+            else
+            {
+                return Convert.ToInt32(obj);
+
+            }
         }
 
 
